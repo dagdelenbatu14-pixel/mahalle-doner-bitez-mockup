@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <!-- Cream background — Instagram circular crop guvenli, koselere kadar dolu -->
+  <rect width="1080" height="1080" fill="#f5e8d0"/>
+
+  <!-- Subtle warm radial glow -->
+  <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+    <stop offset="0%" stop-color="#fef3df" stop-opacity="1"/>
+    <stop offset="100%" stop-color="#f5e8d0" stop-opacity="1"/>
+  </radialGradient>
+  <rect width="1080" height="1080" fill="url(#glow)"/>
+
+  <!-- Outer thin gold ring (decorative, inside Instagram circular crop safe zone) -->
+  <circle cx="540" cy="540" r="500" fill="none" stroke="#d4a04a" stroke-width="4" opacity="0.45"/>
+  <circle cx="540" cy="540" r="488" fill="none" stroke="#d4a04a" stroke-width="1" opacity="0.3"/>
+
+  <!-- Foil cap on top of skewer -->
+  <rect x="475" y="195" width="130" height="60" rx="12" fill="#2a1810"/>
+  <rect x="475" y="195" width="130" height="12" fill="#1a0f08"/>
+
+  <!-- Skewer rod (top + bottom visible) -->
+  <line x1="540" y1="255" x2="540" y2="935" stroke="#2a1810" stroke-width="22" stroke-linecap="round"/>
+
+  <!-- Döner meat — tapered conical (wider top, narrower bottom) -->
+  <path d="M 320 250
+           Q 320 235 335 235
+           L 745 235
+           Q 760 235 760 250
+           L 690 850
+           Q 685 875 665 875
+           L 415 875
+           Q 395 875 390 850 Z"
+        fill="#b8412a"/>
+
+  <!-- Darker right-side shadow for depth -->
+  <path d="M 540 235
+           L 745 235
+           Q 760 235 760 250
+           L 690 850
+           Q 685 875 665 875
+           L 540 875 Z"
+        fill="#8e2f1d" opacity="0.5"/>
+
+  <!-- Highlight on left side -->
+  <path d="M 345 255
+           L 395 255
+           L 375 855
+           L 340 855 Z"
+        fill="#d65a3f" opacity="0.5"/>
+
+  <!-- Subtle vertical lines suggesting layers (very subtle, won't muddle small renders) -->
+  <line x1="380" y1="430" x2="700" y2="430" stroke="#8e2f1d" stroke-width="1.5" opacity="0.25"/>
+  <line x1="378" y1="600" x2="702" y2="600" stroke="#8e2f1d" stroke-width="1.5" opacity="0.25"/>
+  <line x1="378" y1="760" x2="700" y2="760" stroke="#8e2f1d" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Shaved meat slivers (the freshly-cut bit) -->
+  <path d="M 685 805 L 880 875 L 868 920 L 678 855 Z" fill="#b8412a"/>
+  <path d="M 730 870 L 875 920 L 858 950 L 720 905 Z" fill="#8e2f1d" opacity="0.85"/>
+  <path d="M 760 920 L 870 950 L 855 970 L 750 942 Z" fill="#b8412a" opacity="0.75"/>
+
+  <!-- "MAHALLE DÖNER" wordmark, çok kuçuk yazıyı kaldırıyoruz — sadece sembol -->
+</svg>
