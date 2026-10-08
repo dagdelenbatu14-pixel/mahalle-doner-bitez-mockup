@@ -4,8 +4,8 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <title>Mahalle Döner · Bitez, Bodrum — Et &amp; Tavuk Döner, Açık Hava</title>
-<meta name="description" content="Mahalle Döner — Bitez Cami Sokak'ta tavuk döner, dürüm ve tavuk burger. Lavaş dürüm, zurna, tombik, somun ekmek arası, porsiyon, pilav üstü, iskender, tavuk burger ve smash tavuk burger; açık hava bölümü, çocuk menüsü, paket servis, her gün 11:00–24:00. Tel: 0533 192 48 31."/>
-<meta name="keywords" content="Mahalle Döner, tavuk döner Bitez, tavuk döner Bodrum, tavuk burger Bitez, smash burger Bitez, tombik döner Bitez, döner Bitez, döner Bodrum, Bitez Cami Sokak döner, açık hava döner, zurna dürüm, lavaş dürüm, çocuk menüsü Bitez"/>
+<meta name="description" content="Mahalle Döner — Bitez Cami Sokak'ta tavuk döner, dürüm ve tavuk burger. Lavaş dürüm, zurna, tombik, somun ekmek arası, porsiyon, pilav üstü, iskender, tantuni, tavuk burger ve smash tavuk burger; açık hava bölümü, çocuk menüsü, paket servis, her gün 10:00–24:00. Tel: 0533 192 48 31 / 0533 199 48 31."/>
+<meta name="keywords" content="Mahalle Döner, tavuk döner Bitez, tavuk döner Bodrum, tavuk burger Bitez, smash burger Bitez, tombik döner Bitez, tantuni Bitez, döner Bitez, döner Bodrum, Bitez Cami Sokak döner, açık hava döner, zurna dürüm, lavaş dürüm, çocuk menüsü Bitez"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="theme-color" content="#b8412a"/>
 <link rel="canonical" href="https://mahalledonerbitez.com/"/>
@@ -43,7 +43,7 @@
   "alternateName": "Mahalle Döner Bitez",
   "image": "https://mahalledonerbitez.com/images/og.jpg",
   "description": "Bitez Cami Sokak'ta açılan samimi döner işletmesi. Et &amp; tavuk döner, dürüm, pilav üstü, açık hava bölümü, çocuk menüsü.",
-  "telephone": "+905331924831",
+  "telephone": ["+905331924831", "+905331994831"],
   "url": "https://mahalledonerbitez.com/",
   "priceRange": "$",
   "servesCuisine": ["Turkish","Döner","Kebap","Sokak Lezzetleri"],
@@ -58,7 +58,7 @@
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "11:00",
+    "opens": "10:00",
     "closes": "00:00"
   }],
   "acceptsReservations": false,
@@ -180,11 +180,17 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
 .menu-card ul { list-style: none; padding: 0; margin: 0; }
 .menu-card li { padding: 10px 0; border-top: 1px solid rgba(26,15,8,.08); font-size: .94rem; color: var(--ink-soft); display: flex; justify-content: space-between; gap: 16px; }
 .menu-card li:first-child { border-top: 0; padding-top: 0; }
+.menu-card__sub { font-family: var(--f-display); font-weight: 600; font-size: 1.25rem; color: var(--char); margin: 30px 0 12px; }
 .menu-card li span { color: var(--ember); font-family: var(--f-display); font-style: italic; white-space: nowrap; }
-.menu-card--cta { display: flex; flex-direction: column; align-items: flex-start; background: var(--char); border-color: var(--char); }
-.menu-card--cta h3 { color: var(--paper); }
-.menu-card--cta p { color: rgba(255,255,255,.72); }
-.menu-card--cta .btn { margin-top: auto; }
+.menu__cta { margin-top: 48px; text-align: center; }
+.menu__cta p { color: var(--ink-soft); margin: 0 0 18px; }
+.cards { max-width: 620px; margin: 56px auto 0; background: #fff; border-radius: 28px; padding: 30px 34px 34px; box-shadow: 0 18px 40px -24px rgba(26,15,8,.35); }
+.cards__title { text-align: center; margin: 0 0 22px; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ember); font-weight: 600; }
+.cards__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 30px; }
+.cards__grid li { display: flex; align-items: center; justify-content: center; height: 64px; }
+.cards__grid img { max-width: 100%; max-height: 52px; width: auto; height: auto; object-fit: contain; }
+.cards__grid img[src$="token-flex.png"] { max-height: 34px; }
+@media (max-width: 520px) { .cards { padding: 24px 20px 26px; border-radius: 22px; } .cards__grid { gap: 18px 18px; } .cards__grid li { height: 52px; } .cards__grid img { max-height: 42px; } }
 @media (max-width: 860px) { .menu__grid { grid-template-columns: 1fr; } }
 
 /* atmosphere */
@@ -289,14 +295,14 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
     <div class="hero__ornament">MAHALLE</div>
     <p class="hero__eyebrow">Bitez · Bodrum · Mahalle Sıcaklığı</p>
     <h1>Cami Sokak'ın <em>yeni döner durağı.</em></h1>
-    <p class="hero__sub">Tavuk döner, dürüm ve tavuk burger — açık havada, mahalle havasında, çocuklarla rahatça. Gece 24:00'a kadar.</p>
+    <p class="hero__sub">Tavuk döner, tantuni ve tavuk burger — açık havada, mahalle havasında, çocuklarla rahatça. Gece 24:00'a kadar.</p>
     <div class="cta-row">
       <a href="tel:+905331924831" class="btn btn-primary">Sipariş için ara</a>
       <a href="#iletisim" class="btn btn-ghost">Adrese git</a>
     </div>
     <dl class="hero__meta">
       <div><dt>Konum</dt><dd>Bitez · Cami Sk.</dd></div>
-      <div><dt>Açık</dt><dd>11:00 – 00:00</dd></div>
+      <div><dt>Açık</dt><dd>10:00 – 00:00</dd></div>
       <div><dt>Açık Hava</dt><dd>Var</dd></div>
       <div><dt>Çocuk Menüsü</dt><dd>Var</dd></div>
     </dl>
@@ -328,8 +334,8 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
     <div class="section-head">
       <div class="ornament">● ● ●</div>
       <p class="eyebrow">Menü</p>
-      <h2>Döner, dürüm, <em>tavuk burger.</em></h2>
-      <p>Marine tavuk butundan döner; lavaş ve zurna dürümler, tombik ve somun ekmek arası, porsiyon ve pilav üstü; tavuk burger, smash tavuk burger ve burger menü.</p>
+      <h2>Döner, tantuni, <em>tavuk burger.</em></h2>
+      <p>Marine tavuk butundan döner; lavaş ve zurna dürümler, tombik ve somun ekmek arası, porsiyon ve pilav üstü; sacda tantuni; tavuk burger, smash tavuk burger ve burger menü.</p>
     </div>
 
     <div class="menu__grid">
@@ -379,6 +385,18 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
 
       <article class="menu-card">
         <div class="menu-card__num">— 04</div>
+        <h3>Tantuni</h3>
+        <p>Sacda pişen tantuni; lavaşta, somunda ve porsiyon.</p>
+        <ul>
+          <li>Lavaş Tantuni<span>180 ₺</span></li>
+          <li>Somun Tantuni<span>180 ₺</span></li>
+          <li>Porsiyon Tantuni<span>280 ₺</span></li>
+          <li>Porsiyon Tantuni Yoğurtlu<span>300 ₺</span></li>
+        </ul>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card__num">— 05</div>
         <h3>Burger</h3>
         <p>Tavuk burgerler, patates ve içecekli menü.</p>
         <ul>
@@ -386,10 +404,18 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
           <li>Smash Tavuk Burger<span>350 ₺</span></li>
           <li>Tavuk Burger Menü<span>450 ₺</span></li>
         </ul>
+        <h4 class="menu-card__sub">Yan Ürünler</h4>
+        <ul>
+          <li>Patates Tabağı<span>150 ₺</span></li>
+          <li>Özel Sarımsaklı Sos<span>50 ₺</span></li>
+          <li>Rendelenmiş Kaşar Peyniri<span>50 ₺</span></li>
+          <li>Dilimli Cheddar Peyniri<span>50 ₺</span></li>
+          <li>Acı Sos<span>50 ₺</span></li>
+        </ul>
       </article>
 
       <article class="menu-card">
-        <div class="menu-card__num">— 05</div>
+        <div class="menu-card__num">— 06</div>
         <h3>İçecekler</h3>
         <p>Serinleten seçenekler.</p>
         <ul>
@@ -407,17 +433,27 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
         </ul>
       </article>
 
-      <article class="menu-card menu-card--cta">
-        <div class="menu-card__num">— 06</div>
-        <h3>Fotoğraflı Menü</h3>
-        <p>Tüm ürünlerimizin fotoğrafları ve güncel fiyatlar QR menümüzde. Masadaki QR kodu okutabilir ya da buradan açabilirsiniz.</p>
-        <a class="btn btn-primary" href="https://menu.mahalledoner.com/menu.html" target="_blank" rel="noopener">Menüyü Aç</a>
-      </article>
     </div>
 
-    <p style="text-align:center; margin-top: 40px; font-size:.92rem; color: var(--ink-soft);">
-      Yemek kartı kabul ediyoruz: Metropol Card, Multinet, Pluxee, Ticket Restaurant, Edenred, Setcard, Token Flex.<br/>
-      Sipariş için <a href="tel:+905331924831" style="color: var(--ember); text-decoration: none; border-bottom: 1px dashed var(--ember);">0533 192 48 31</a>.
+    <div class="menu__cta">
+      <p>Tüm ürünlerimizin fotoğrafları ve güncel fiyatlar QR menümüzde.</p>
+      <a class="btn btn-primary" href="https://menu.mahalledoner.com/menu.html" target="_blank" rel="noopener">Fotoğraflı Menüyü Aç</a>
+    </div>
+
+    <div class="cards">
+      <p class="cards__title">Yemek kartı geçerlidir</p>
+      <ul class="cards__grid">
+        <li><img src="images/kartlar/metropol-card.svg" alt="Metropol Card" loading="lazy"/></li>
+        <li><img src="images/kartlar/multinet.svg" alt="Multinet" loading="lazy"/></li>
+        <li><img src="images/kartlar/pluxee.svg" alt="Pluxee" loading="lazy"/></li>
+        <li><img src="images/kartlar/ticket-restaurant.png" alt="Ticket Restaurant · Edenred" loading="lazy"/></li>
+        <li><img src="images/kartlar/setcard.svg" alt="Setcard" loading="lazy"/></li>
+        <li><img src="images/kartlar/token-flex.png" alt="Token Flex" loading="lazy"/></li>
+      </ul>
+    </div>
+
+    <p style="text-align:center; margin-top: 28px; font-size:.92rem; color: var(--ink-soft);">
+      Sipariş için <a href="tel:+905331924831" style="color: var(--ember); text-decoration: none; border-bottom: 1px dashed var(--ember);">0533 192 48 31</a> · <a href="tel:+905331994831" style="color: var(--ember); text-decoration: none; border-bottom: 1px dashed var(--ember);">0533 199 48 31</a>.
     </p>
   </div>
 </section>
@@ -502,11 +538,11 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
         </div>
         <div class="contact__row">
           <div class="contact__label">Telefon</div>
-          <div class="contact__value"><a href="tel:+905331924831">0533 192 48 31</a></div>
+          <div class="contact__value"><a href="tel:+905331924831">0533 192 48 31</a> · <a href="tel:+905331994831">0533 199 48 31</a></div>
         </div>
         <div class="contact__row">
           <div class="contact__label">Çalışma Saatleri</div>
-          <div class="contact__value">Her gün · 11:00 – 00:00</div>
+          <div class="contact__value">Her gün · 10:00 – 00:00</div>
         </div>
         <div class="contact__row">
           <div class="contact__label">Servis</div>
@@ -533,7 +569,7 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
 <footer class="foot">
   <div class="wrap foot__inner">
     <div>© <span id="yyyy"></span> Mahalle Döner · Bitez, Bodrum</div>
-    <div>0533 192 48 31 · Cami Sk. 13-11, Bitez</div>
+    <div>0533 192 48 31 · 0533 199 48 31 · Cami Sk. 13-11, Bitez</div>
   </div>
 </footer>
 
